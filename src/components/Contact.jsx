@@ -3,7 +3,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="bg-gray-950 text-white py-24 px-6"
+      className="scroll-mt-24 bg-gray-950 text-white py-24 px-6"
     >
       <div className="max-w-4xl mx-auto text-center">
 

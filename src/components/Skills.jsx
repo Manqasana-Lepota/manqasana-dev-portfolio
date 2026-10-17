@@ -26,7 +26,7 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="bg-gray-950 text-white py-24 px-6"
+      className="scroll-mt-24 bg-gray-950 text-white py-24 px-6"
     >
       <div className="max-w-6xl mx-auto">
 

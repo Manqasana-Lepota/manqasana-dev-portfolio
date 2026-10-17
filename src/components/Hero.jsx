@@ -1,6 +1,6 @@
 function Hero() {
     return(
-        <section id="#home" className="min-h-screen flex items-center bg-gray-950 text-white px-6">
+        <section id="home" className="min-h-screen flex items-center bg-gray-950 text-white px-6">
             <div className="max-w-6xl mx-auto w-full">
                 <p className="text-blue-400 text-lg mb-4">
                     Hello, I'm
@@ -12,7 +12,7 @@ function Hero() {
                     Software Developer
                 </h2>
                 <p className="text-gray-400 text-lg max-w-2xl leading-relaxed mb-8">
-                    I build a reliable and user-friendly software appications using 
+                    I build a reliable and user-friendly software applications using 
                     Java, Python, JavaScript, React, SQL and cloud technologies.
                     I am passionate about software development, problem solving
                     and continuously growing my technical skills.

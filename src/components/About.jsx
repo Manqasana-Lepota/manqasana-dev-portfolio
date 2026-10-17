@@ -3,7 +3,7 @@ function About() {
   return (
     <section
       id="about"
-      className="bg-gray-900 text-white py-24 px-6"
+      className="scroll-mt-24 bg-gray-900 text-white py-24 px-6"
     >
       <div className="max-w-6xl mx-auto">
 
