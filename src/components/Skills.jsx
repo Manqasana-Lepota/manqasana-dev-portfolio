@@ -2,7 +2,7 @@
 const skillGroups = [
   {
     title: "Programming Languages",
-    skills: ["Java", "Python", "JavaScript", "SQL"],
+    skills: ["Java", "Python", "C#", "JavaScript", "SQL"],
   },
   {
     title: "Frontend Development",
@@ -18,7 +18,7 @@ const skillGroups = [
   },
   {
     title: "Tools & Cloud",
-    skills: ["Git", "GitHub", "Microsoft Azure", "Docker (Basic)"],
+    skills: ["Git", "GitHub", "Microsoft Azure", "Docker (Basic)", "Kubernetes"],
   },
 ]
 
