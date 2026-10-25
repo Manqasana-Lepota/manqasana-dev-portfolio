@@ -1,34 +1,36 @@
 
+
 const experiences = [
   {
     role: "Cloud Security Intern",
     company: "LGIT Smart Solutions",
     period: "Mar 2024 – Jul 2024",
     description:
-      "Gained practical exposure to Microsoft Azure, cloud administration, system monitoring and maintenance, and Azure AD and Microsoft 365 security troubleshooting.",
+      "Gained practical exposure to Microsoft Azure fundamentals and administration. Assisted with Azure-based system deployment, monitoring and maintenance, and troubleshooting involving Azure Active Directory (Microsoft Entra ID) and Microsoft 365. Developed an understanding of cloud security, access management and system administration.",
   },
   {
-    role: "Application Support",
+    role: "IT / Enterprise Application Support",
     company: "Standard Bank",
     period: "Apr 2021 – Apr 2022",
     description:
-      "Supported enterprise banking applications in a high-availability environment. Assisted with production incidents, user account creation, UAT and issue tracking using BMC Remedy and IntelliMatch.",
+      "Supported enterprise banking applications in a high-availability production environment. Assisted with production incident investigation and resolution, user account creation, and application troubleshooting. Used BMC Remedy for incident management and worked with IntelliMatch. Participated in User Acceptance Testing (UAT) and collaborated with technical and business teams in an Agile/Scrum environment.",
   },
   {
-    role: "IT / Systems Development Learner",
+    role: "Systems Development Learner",
     company: "Umuzi Academy",
     period: "Jan 2020 – Mar 2021",
     description:
-      "Completed systems development training focused on programming, technical problem-solving and software development fundamentals.",
+      "Completed systems development training focused on programming, software development fundamentals and technical problem-solving.",
   },
   {
-    role: "Software Development Intern / Learner",
+    role: "Junior Java Developer",
     company: "JumpCo",
     period: "Jan 2018 – Dec 2019",
     description:
-      "Supported software development tasks involving Java, object-oriented programming, SQL, application testing, debugging and maintenance.",
+      "Supported software development, maintenance and troubleshooting activities using Java and object-oriented programming. Gained practical exposure to Java 8/11, Spring Boot, Hibernate, REST services, JSP, JavaScript and jQuery. Worked with MySQL and JDBC for database-related development, JUnit for testing, and Git for source-code management. Assisted with debugging and resolving software issues.",
   },
-]
+];
+
 
 function Experience() {
   return (
