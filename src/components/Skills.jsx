@@ -18,7 +18,7 @@ const skillGroups = [
   },
   {
     title: "Tools & Cloud",
-    skills: ["Git", "GitHub", "Microsoft Azure", "Docker (Basic)", "Kubernetes"],
+    skills: ["Git", "GitHub", "Microsoft Azure", "Docker", "Kubernetes"],
   },
 ]
 
