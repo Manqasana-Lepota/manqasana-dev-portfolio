@@ -37,7 +37,7 @@ function Contact() {
             href={`mailto:${email}?subject=${encodeURIComponent(
               "Software Development Opportunity"
             )}`}
-            className="bg-blue-600 hover:bg-blue-700 focus-visible:outline
+            className="bg-blue-600 hover:bg-blue-700
               focus-visible:outline-2 focus-visible:outline-offset-4
               focus-visible:outline-blue-400 px-6 py-3 rounded-lg
               font-semibold transition"
