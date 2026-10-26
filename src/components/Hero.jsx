@@ -41,14 +41,13 @@ function Hero() {
           >
             Contact Me
           </a>
-
           <a
-            href="/Manqasana-Lepota-CV.pdf"
+            href={`${import.meta.env.BASE_URL}Manqasana-Lepota-CV.pdf`}
             download
             className="bg-white hover:bg-gray-200 text-gray-900 px-6 py-3 rounded-lg font-semibold transition-colors"
-          >
+            >
             Download CV
-          </a>
+            </a>
         </div>
       </div>
     </section>
