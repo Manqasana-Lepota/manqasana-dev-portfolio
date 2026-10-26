@@ -15,7 +15,7 @@ function Contact() {
     <section
       id="contact"
       aria-labelledby="contact-heading"
-      className="scroll-mt-24 bg-gray-950 text-white py-24 px-6"
+      className="scroll-mt-24 bg-gray-900 text-white py-24 px-6"
     >
       <div className="max-w-4xl mx-auto text-center">
         <h2

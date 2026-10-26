@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react"
 
 function Navbar() {
@@ -9,37 +10,64 @@ function Navbar() {
     { label: "About", href: "#about" },
     { label: "Skills", href: "#skills" },
     { label: "Projects", href: "#projects" },
+    { label: "Current Learning", href: "#current-learning" },
     { label: "Experience", href: "#experience" },
     { label: "Education", href: "#education" },
     { label: "Contact", href: "#contact" },
   ]
 
   useEffect(() => {
+    const sections = navLinks
+      .map((link) => document.getElementById(link.href.slice(1)))
+      .filter(Boolean)
+
+    if (!sections.length) return
+
     const observer = new IntersectionObserver(
       (entries) => {
-        const visibleSection = entries.find((entry) => entry.isIntersecting)
-        if (visibleSection) {
-          setActiveSection(visibleSection.target.id)
+        const visibleSections = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort(
+            (a, b) =>
+              Math.abs(a.boundingClientRect.top) -
+              Math.abs(b.boundingClientRect.top)
+          )
+
+        if (visibleSections.length > 0) {
+          setActiveSection(visibleSections[0].target.id)
         }
       },
-      { rootMargin: "-35% 0px -55% 0px" }
+      {
+        rootMargin: "-20% 0px -60% 0px",
+        threshold: 0,
+      }
     )
 
-    navLinks.forEach((link) => {
-      const sectionId = link.href.slice(1)
-      const section = document.getElementById(sectionId)
-      if (section) observer.observe(section)
-    })
+    sections.forEach((section) => observer.observe(section))
 
     return () => observer.disconnect()
+  }, [])
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setMenuOpen(false)
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown)
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown)
+    }
   }, [])
 
   const getLinkClass = (href) => {
     const isActive = activeSection === href.slice(1)
 
-    return `transition ${
+    return `transition-colors duration-200 ${
       isActive
-        ? "text-blue-400"
+        ? "text-blue-400 font-semibold"
         : "text-gray-300 hover:text-blue-400"
     }`
   }
@@ -49,33 +77,37 @@ function Navbar() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a
           href="#home"
-          className="text-xl font-bold text-white"
+          className="font-['Space_Grotesk'] text-xl font-bold tracking-tight text-white"
           onClick={() => {
-            setActiveSection("home")
-            setMenuOpen(false)
+            setActiveSection("home");
+            setMenuOpen(false);
           }}
         >
-          Manqasana
+          Manqasana<span className="text-blue-400">.</span>
         </a>
+
 
         <button
           type="button"
           className="text-2xl text-white md:hidden"
           aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={menuOpen}
-          onClick={() => setMenuOpen(!menuOpen)}
+          aria-controls="mobile-navigation"
+          onClick={() => setMenuOpen((open) => !open)}
         >
           {menuOpen ? "✕" : "☰"}
         </button>
 
-        <div className="hidden gap-5 text-sm md:flex">
+        <div className="hidden gap-3 text-sm lg:gap-5 md:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               className={getLinkClass(link.href)}
               aria-current={
-                activeSection === link.href.slice(1) ? "location" : undefined
+                activeSection === link.href.slice(1)
+                  ? "location"
+                  : undefined
               }
               onClick={() => setActiveSection(link.href.slice(1))}
             >
@@ -86,14 +118,19 @@ function Navbar() {
       </div>
 
       {menuOpen && (
-        <div className="flex flex-col gap-4 border-t border-gray-800 bg-gray-950 px-6 py-4 md:hidden">
+        <div
+          id="mobile-navigation"
+          className="flex flex-col gap-4 border-t border-gray-800 bg-gray-950 px-6 py-4 md:hidden"
+        >
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               className={getLinkClass(link.href)}
               aria-current={
-                activeSection === link.href.slice(1) ? "location" : undefined
+                activeSection === link.href.slice(1)
+                  ? "location"
+                  : undefined
               }
               onClick={() => {
                 setActiveSection(link.href.slice(1))

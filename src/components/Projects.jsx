@@ -1,20 +1,22 @@
 
+
 const projects = [
   {
     title: "Clinic Booking System",
     description:
-      "A web application for managing clinic appointments, users and consultation records. Includes separate Admin, Doctor and Patient modules.",
+      "A web-based clinic booking application with separate Admin, Doctor and Patient modules for managing appointments and clinic activities.",
     technologies: ["Python", "Flask", "MySQL", "Bootstrap"],
     github: "https://github.com/Manqasana-Lepota/clinic-booking-system",
   },
   {
-    title: "My Portfolio",
+    title: "Personal Developer Portfolio",
     description:
-      "A responsive personal portfolio showcasing my technical skills, software projects and professional background.",
-    technologies: ["React", "Vite", "JavaScript", "Tailwind CSS"],
+      "A personal portfolio showcasing my software development skills, projects, technical experience and professional background.",
+    technologies: ["React", "Vite", "Tailwind CSS", "JavaScript"],
     github: "https://github.com/Manqasana-Lepota/manqasana-dev-portfolio",
   },
-]
+];
+
 
 function Projects() {
   return (
